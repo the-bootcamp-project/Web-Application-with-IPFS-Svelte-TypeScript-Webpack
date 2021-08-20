@@ -1,1 +1,1 @@
-[filename](https://web-app-ipfs.rtfm.page/_media/README.md ':include')
+[filename](https://web-application.rtfm.page/_media/README.md ':include')
