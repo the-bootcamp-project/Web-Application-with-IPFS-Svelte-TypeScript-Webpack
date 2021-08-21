@@ -1,11 +1,40 @@
+# Add TypeScript Support
+
+```bash
+yarn add ts-loader typescript --dev
+```
+
+```javascript
+resolve: {
+    extensions: [".ts", ".js"] // Add `.ts` as a resolvable extension.
+},
+module: {
+    rules: [
+        ...
+        { test: /\.ts?$/, loader: "ts-loader" }
+    ],
+},
+```
+
+Run:
+
+```bash
+tsc --init
+```
+
+`message TS6071: Successfully created a tsconfig.json file.`
+
+or copy the example below in a new `tsconfig.json` file.
+
+```json
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
     /* Basic Options */
     // "incremental": true,                         /* Enable incremental compilation */
-    "target": "ES2015",                             /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ES2021', or 'ESNEXT'. */
-    "module": "es2015",                             /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
+    "target": "es5",                                /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ES2021', or 'ESNEXT'. */
+    "module": "commonjs",                           /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
     // "lib": [],                                   /* Specify library files to be included in the compilation. */
     // "allowJs": true,                             /* Allow javascript files to be compiled. */
     // "checkJs": true,                             /* Report errors in .js files. */
@@ -32,16 +61,16 @@
     // "strictBindCallApply": true,                 /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
     // "strictPropertyInitialization": true,        /* Enable strict checking of property initialization in classes. */
     // "noImplicitThis": true,                      /* Raise error on 'this' expressions with an implied 'any' type. */
-    "alwaysStrict": true,                           /* Parse in strict mode and emit "use strict" for each source file. */
+    // "alwaysStrict": true,                        /* Parse in strict mode and emit "use strict" for each source file. */
 
     /* Additional Checks */
-    "noUnusedLocals": true,                      /* Report errors on unused locals. */
-    "noUnusedParameters": true,                  /* Report errors on unused parameters. */
-    "noImplicitReturns": true,                   /* Report error when not all code paths in function return a value. */
-    "noFallthroughCasesInSwitch": true,          /* Report errors for fallthrough cases in switch statement. */
-    "noUncheckedIndexedAccess": true,            /* Include 'undefined' in index signature results */
-    "noImplicitOverride": true,                  /* Ensure overriding members in derived classes are marked with an 'override' modifier. */
-    "noPropertyAccessFromIndexSignature": true,  /* Require undeclared properties from index signatures to use element accesses. */
+    // "noUnusedLocals": true,                      /* Report errors on unused locals. */
+    // "noUnusedParameters": true,                  /* Report errors on unused parameters. */
+    // "noImplicitReturns": true,                   /* Report error when not all code paths in function return a value. */
+    // "noFallthroughCasesInSwitch": true,          /* Report errors for fallthrough cases in switch statement. */
+    // "noUncheckedIndexedAccess": true,            /* Include 'undefined' in index signature results */
+    // "noImplicitOverride": true,                  /* Ensure overriding members in derived classes are marked with an 'override' modifier. */
+    // "noPropertyAccessFromIndexSignature": true,  /* Require undeclared properties from index signatures to use element accesses. */
 
     /* Module Resolution Options */
     // "moduleResolution": "node",                  /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
@@ -49,7 +78,7 @@
     // "paths": {},                                 /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
     // "rootDirs": [],                              /* List of root folders whose combined content represents the structure of the project at runtime. */
     // "typeRoots": [],                             /* List of folders to include type definitions from. */
-		"types": ["svelte","svelte/store","svelte/motion","svelte/transition","svelte/animate","svelte/easing"], /* Type declaration files to be included in compilation. */
+    // "types": [],                                 /* Type declaration files to be included in compilation. */
     // "allowSyntheticDefaultImports": true,        /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
     "esModuleInterop": true,                        /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
     // "preserveSymlinks": true,                    /* Do not resolve the real path of symlinks. */
@@ -68,6 +97,38 @@
     /* Advanced Options */
     "skipLibCheck": true,                           /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true        /* Disallow inconsistently-cased references to the same file. */
-  },
-  "exclude": ["node_modules/*"],
+  }
 }
+```
+
+add the Devtools Key in the `webpack.config.js` file and rename the entry file from `entry: './src/index.js'` to `entry: './src/index.ts'`.
+
+```javascript
+module.exports = {
+    ...
+    devtool: 'inline-source-map',
+    entry: './src/index.ts',
+    ...
+    module: {
+        rules: [
+            ...
+            { test: /\.ts?$/, loader: "ts-loader" }
+            ...
+        ],
+    },
+};
+```
+
+- .devcontainer
+  - devcontainer.json
+- src
+  - index.js
+- .gitignore
+- Dockerfile
+- package.json
+- tsconfig.json
+- webpack.config.js
+
+Rename the `src/index.js` in `src/index.ts`
+
+run `yarn run build` it should bundle the Source Code without any Error/Warning, double check with `yarn run preview` if you like what you see.

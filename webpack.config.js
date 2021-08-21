@@ -5,17 +5,29 @@ const renderer = new marked.Renderer();
 const toml = require('toml');
 const yaml = require('yamljs');
 const json5 = require('json5');
+const SveltePreprocess = require('svelte-preprocess');
+const Autoprefixer  = require('autoprefixer');
+
+const mode = process.env.NODE_ENV ?? 'development';
+const isProduction = mode === 'production';
+const isDevelopment = !isProduction;
 
 module.exports = {
-    mode: 'development',
+	mode: isProduction ? 'production' : 'development',
     devtool: 'inline-source-map',
+
     entry: './src/index.ts',
     output: {
-        filename: 'main.js', path: path.resolve(__dirname, 'dist'),
+        filename: 'main.js',
+        path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
     resolve: {
-        extensions: [".ts", ".js"] // Add `.ts` as a resolvable extension.
+        alias: {
+            svelte: path.resolve('node_modules', 'svelte')
+        },
+        extensions: ['.mjs', '.js', '.ts', '.svelte'],
+        mainFields: ['svelte', 'browser', 'module', 'main']
     },
     module: {
         rules: [
@@ -26,7 +38,11 @@ module.exports = {
             { test: /\.toml$/i, type: 'json', parser: { parse: toml.parse } },
             { test: /\.yaml$/i, type: 'json', parser: { parse: yaml.parse } },
             { test: /\.json5$/i, type: 'json', parser: { parse: json5.parse } },
-            { test: /\.ts?$/, loader: "ts-loader" }
+            { test: /\.ts?$/, loader: "ts-loader" },
+            { test: /\.svelte$/ ,use: { loader: 'svelte-loader', options: { emitCss: isProduction, preprocess: SveltePreprocess({ scss: true, sass: true, postcss: { plugins: [Autoprefixer] } }) } } },
+            { test: /\.(scss|sass)$/, use: [ 'css-loader', { loader: 'postcss-loader', options: { postcssOptions: { plugins: [Autoprefixer] } } }, 'sass-loader'] },
+            { test: /\.css$/, use: 'css-loader' },
+            { test: /node_modules\/svelte\/.*\.mjs$/, resolve: { fullySpecified: false } } // required to prevent errors from Svelte on Webpack 5+, omit on Webpack 4
         ],
     },
     plugins: [

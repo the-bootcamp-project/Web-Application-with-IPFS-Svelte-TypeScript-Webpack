@@ -1,9 +1,7 @@
-function component() {
-    const element = document.createElement('div');
+import App from './components/main/App.svelte';
 
-    element.innerHTML = 'Hello webpack';
+const app = new App({
+	target: document.body
+});
 
-    return element;
-}
-
-document.body.appendChild(component());
+export default app;

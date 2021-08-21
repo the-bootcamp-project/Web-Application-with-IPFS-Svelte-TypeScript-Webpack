@@ -66,7 +66,6 @@ _For more examples, please refer to the [Documentation](https://web-application.
 - [docsify](https://docsify.js.org/)
 - [Mocha](https://mochajs.org/)
 - [Chai](https://www.chaijs.com/)
-- [VS Code](https://code.visualstudio.com/)
 - [Docker](https://www.docker.com/)
 
 ## 📑 Changelog 📑
@@ -112,6 +111,9 @@ Thanks for these awesome resources that were used during the development of the 
   - [Customize parser of JSON modules](https://webpack.js.org/guides/asset-management/#customize-parser-of-json-modules)
   - [resolve.alias](https://webpack.js.org/configuration/resolve/#resolvealias)
   - [The Manifest](https://webpack.js.org/concepts/manifest/)
-- **Svelte**
-  - [How to test Svelte components](https://timdeschryver.dev/blog/how-to-test-svelte-components)
+- **TypeScript**
+  - [TypeStrong/ts-loader](https://github.com/TypeStrong/ts-loader)
   - [Unit Testing in TypeScript Code](https://blog.jetbrains.com/dotnet/2020/09/10/unit-testing-in-typescript-code/)
+- **Svelte**
+  - [sveltejs/svelte-loader](https://github.com/sveltejs/svelte-loader)
+  - [How to test Svelte components](https://timdeschryver.dev/blog/how-to-test-svelte-components)
