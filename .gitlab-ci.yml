@@ -10,7 +10,7 @@ docker-build:
     - docker build --pull -t "index.docker.io/tbcp/webapplication:latest" .
     - docker push "index.docker.io/tbcp/webapplication:latest"
   only:
-    - main
+    - release
 
 pages:
     stage: deploy

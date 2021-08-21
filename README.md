@@ -8,15 +8,38 @@
 
 ## 👉 About 👈
 
-**Minimum Viable Product**:
+**Minimum Viable Product**: What is what we want?
 
-### 😎 Built With 😎
+- [ ] A Modern Web Application
+  - [ ] with Webpack bundeling
+  - [ ] TypeScript Support
+  - [ ] and Svelte Frontend Framework
+- [ ] A Test Driven Development approche
+  - [ ] with Mocha and Chai
+- [ ] from Startup, a Static Application Security Code Analyzing
+  - [ ] with ESLint (eslint-plugin-security)
+- [ ] a on Board Documentation for our Users
+- [ ] at the end, the web application shoud hosted in the IPFS-Network
 
-## 📖 Getting Started 📖
+---
+
+## 🚀 Getting Started 🚀
+
+If you want to learn from the development path, go to the [Documentation](https://web-application.rtfm.page/).
+
+Atherwise, glfh...
 
 ### ✋ Prerequisites ✋
 
-**Change the project-specific attributes.** See [TODO](TODO.md) for more information.
+So we talk the same language, is it highly recomendet that we have the same Playground (Development Environment)
+
+**Pleas install the [VSCode Editor](https://code.visualstudio.com/)**
+
+and "Clone" our [GitLab Repository](https://gitlab.com/the-bootcamp-project/boilerplates/web-application.git).
+
+```bash
+git clone https://gitlab.com/the-bootcamp-project/boilerplates/web-application.git
+```
 
 ### 💪 Installation 💪
 
@@ -33,6 +56,18 @@
 _For more examples, please refer to the [Documentation](https://web-application.rtfm.page/)_
 
 ## ⭐️ Features ⭐️
+
+### 😎 Built With 😎
+
+- [Webpack](https://webpack.js.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Svelte](https://svelte.dev/)
+- [IPFS](https://ipfs.io/)
+- [docsify](https://docsify.js.org/)
+- [Mocha](https://mochajs.org/)
+- [Chai](https://www.chaijs.com/)
+- [VS Code](https://code.visualstudio.com/)
+- [Docker](https://www.docker.com/)
 
 ## 📑 Changelog 📑
 
@@ -64,3 +99,9 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 ## 🏆 Acknowledgements 🏆
 
 Thanks for these awesome resources that were used during the development of the **Bootcamp Project: Web Application with IPFS Svelte TypeScript Webpack**:
+
+- [Getting Started](https://webpack.js.org/guides/getting-started/)
+- [Using Watch Mode](https://webpack.js.org/guides/development/#using-watch-mode)
+- [Using webpack-dev-server](https://webpack.js.org/guides/development/#using-webpack-dev-server)
+- [How to test Svelte components](https://timdeschryver.dev/blog/how-to-test-svelte-components)
+- [Unit Testing in TypeScript Code](https://blog.jetbrains.com/dotnet/2020/09/10/unit-testing-in-typescript-code/)
