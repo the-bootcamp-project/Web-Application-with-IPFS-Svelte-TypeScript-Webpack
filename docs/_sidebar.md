@@ -1,8 +1,11 @@
 **Web-Application**
 
 - [**Getting Started**](/getting_started.md "Getting Started - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
-- [**First Try**](/getting_started.md "First Try - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
-- [**Documentation**](/docsify/index.md "Documentation - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
+- [**First Try**](/first_try.md "First Try - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
+
+**How to work with**
+
+- [**Docsify**](/docsify/index.md "Docsify - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
 - [**Webpack**](/webpack/index.md "Webpack - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
 - [**TypeScript**](/typescript/index.md "TypeScript - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
 - [**Svelte**](/svelte/index.md "Svelte - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
