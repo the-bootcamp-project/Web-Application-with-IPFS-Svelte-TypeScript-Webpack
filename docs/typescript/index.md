@@ -1,1 +1,0 @@
-# Web Application with TypeScript

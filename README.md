@@ -100,8 +100,18 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 Thanks for these awesome resources that were used during the development of the **Bootcamp Project: Web Application with IPFS Svelte TypeScript Webpack**:
 
-- [Getting Started](https://webpack.js.org/guides/getting-started/)
-- [Using Watch Mode](https://webpack.js.org/guides/development/#using-watch-mode)
-- [Using webpack-dev-server](https://webpack.js.org/guides/development/#using-webpack-dev-server)
-- [How to test Svelte components](https://timdeschryver.dev/blog/how-to-test-svelte-components)
-- [Unit Testing in TypeScript Code](https://blog.jetbrains.com/dotnet/2020/09/10/unit-testing-in-typescript-code/)
+- **Webpack**
+  - [Getting Started](https://webpack.js.org/guides/getting-started/)
+  - [Using Watch Mode](https://webpack.js.org/guides/development/#using-watch-mode)
+  - [Using webpack-dev-server](https://webpack.js.org/guides/development/#using-webpack-dev-server)
+  - [Loading Images](https://webpack.js.org/guides/asset-management/#loading-images)
+  - [Loading Fonts](https://webpack.js.org/guides/asset-management/#loading-fonts)
+  - [html-loader](https://webpack.js.org/loaders/html-loader/)
+  - [HtmlWebpackPlugin](https://webpack.js.org/plugins/html-webpack-plugin/)
+  - [peerigon/markdown-loader](https://github.com/peerigon/markdown-loader)
+  - [Customize parser of JSON modules](https://webpack.js.org/guides/asset-management/#customize-parser-of-json-modules)
+  - [resolve.alias](https://webpack.js.org/configuration/resolve/#resolvealias)
+  - [The Manifest](https://webpack.js.org/concepts/manifest/)
+- **Svelte**
+  - [How to test Svelte components](https://timdeschryver.dev/blog/how-to-test-svelte-components)
+  - [Unit Testing in TypeScript Code](https://blog.jetbrains.com/dotnet/2020/09/10/unit-testing-in-typescript-code/)

@@ -2,14 +2,15 @@
 
 - [**Getting Started**](/getting_started.md "Getting Started - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
 - [**First Try**](/first_try.md "First Try - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
+- [**Expand our project**](/expand_our_project.md "Expand our project - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
 
 **How to work with**
 
-- [**Docsify**](/docsify/index.md "Docsify - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
-- [**Webpack**](/webpack/index.md "Webpack - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
-- [**TypeScript**](/typescript/index.md "TypeScript - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
-- [**Svelte**](/svelte/index.md "Svelte - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
-- [**IPFS**](/ipfs/index.md "IPFS - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
+- [**Docsify**](https://dev.rtfm.page/#/working_with/docsify/index.md "Working with: Docsify | Software Development Knowledgebase by dev.rtfm.page")
+- [**Webpack**](https://dev.rtfm.page/#/working_with/webpack/index.md "Working with: Webpack | Software Development Knowledgebase by dev.rtfm.page")
+- [**TypeScript**](https://dev.rtfm.page/#/working_with/typescript/index.md "Working with: TypeScript | Software Development Knowledgebase by dev.rtfm.page")
+- [**Svelte**](https://dev.rtfm.page/#/working_with/svelte/index.md "Working with: Svelte | Software Development Knowledgebase by dev.rtfm.page")
+- [**IPFS**](https://dev.rtfm.page/#/working_with/ipfs/index.md "Working with: IPFS | Software Development Knowledgebase by dev.rtfm.page")
 
 **Contribute**
 
