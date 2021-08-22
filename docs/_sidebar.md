@@ -4,6 +4,9 @@
 - [**First Try**](/first_try.md "First Try - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
 - [**Expand our project**](/expand_our_project.md "Expand our project - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
 - [**Add TypeScript Support**](/add_typescript_support.md "Add TypeScript Support - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
+- [**Add Svelte Support**](/add_svelte_support.md "Add Svelte Support - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
+- [**Code Analyzing**](/code_analyzing.md "Code Analyzing - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
+- [**Security**](/security.md "Security - Build and Publish a Web Application with IPFS Svelte TypeScript Webpack | Bootcamp Project")
 
 **How to work with**
 

@@ -11,13 +11,13 @@
 **Minimum Viable Product**: What is what we want?
 
 - [ ] A Modern Web Application
-  - [ ] with Webpack bundeling
-  - [ ] TypeScript Support
-  - [ ] and Svelte Frontend Framework
-- [ ] A Test Driven Development approche
-  - [ ] with Mocha and Chai
+  - [X] with Webpack bundeling
+  - [X] TypeScript Support
+  - [X] and Svelte Frontend Framework
 - [ ] from Startup, a Static Application Security Code Analyzing
   - [ ] with ESLint (eslint-plugin-security)
+- [ ] A Test Driven Development approche
+  - [ ] with Mocha and Chai
 - [ ] a on Board Documentation for our Users
 - [ ] at the end, the web application shoud hosted in the IPFS-Network
 
@@ -27,7 +27,7 @@
 
 If you want to learn from the development path, go to the [Documentation](https://web-application.rtfm.page/).
 
-Atherwise, glfh...
+Atherwise, glhf...
 
 ### ✋ Prerequisites ✋
 
@@ -111,9 +111,32 @@ Thanks for these awesome resources that were used during the development of the 
   - [Customize parser of JSON modules](https://webpack.js.org/guides/asset-management/#customize-parser-of-json-modules)
   - [resolve.alias](https://webpack.js.org/configuration/resolve/#resolvealias)
   - [The Manifest](https://webpack.js.org/concepts/manifest/)
+  - [Content Security Policies](https://webpack.js.org/guides/csp/)
+  - [slackhq/csp-html-webpack-plugin](https://github.com/slackhq/csp-html-webpack-plugin)
 - **TypeScript**
+  - [Source Maps](https://webpack.js.org/guides/typescript/#source-maps)
   - [TypeStrong/ts-loader](https://github.com/TypeStrong/ts-loader)
+  - [TypeScript target](https://webhint.io/docs/user-guide/hints/hint-typescript-config/target/)
+  - [Fork TS Checker Webpack Plugin](https://www.npmjs.com/package/fork-ts-checker-webpack-plugin)
+  - [Using ESLint and Prettier in a TypeScript Project](https://dev.to/robertcoopercode/using-eslint-and-prettier-in-a-typescript-project-53jb)
+  - [Create React 17 TypeScript With ESLint , WebPack & SCSS](https://medium.com/edonec/create-react-17-typescript-with-eslint-webpack-scss-c4cdbedc31f6)
   - [Unit Testing in TypeScript Code](https://blog.jetbrains.com/dotnet/2020/09/10/unit-testing-in-typescript-code/)
 - **Svelte**
   - [sveltejs/svelte-loader](https://github.com/sveltejs/svelte-loader)
+  - [sveltejs/template-webpack](https://github.com/sveltejs/template-webpack)
   - [How to test Svelte components](https://timdeschryver.dev/blog/how-to-test-svelte-components)
+- **ESLint**
+  - [Configuring ESLint](https://eslint.org/docs/2.0.0/user-guide/configuring)
+  - [Language Options](https://eslint.org/docs/user-guide/configuring/language-options)
+  - [browserslist/browserslist](https://github.com/browserslist/browserslist)
+  - [Target](https://webpack.js.org/configuration/target/)
+- **IPFS**
+  - [Address IPFS on the Web](https://docs.ipfs.io/how-to/address-ipfs-on-web)
+  - [Host a single-page website on IPFS](https://docs.ipfs.io/how-to/websites-on-ipfs/single-page-website)
+  - [Multi-page website](https://docs.ipfs.io/how-to/websites-on-ipfs/multipage-website/)
+  - [Run IPFS inside Docker](https://docs.ipfs.io/how-to/run-ipfs-inside-docker/)
+  - [Link a domain](https://docs.ipfs.io/how-to/websites-on-ipfs/link-a-domain)
+- **TODO**
+  - [Writing Reusable Components in ES6](https://www.smashingmagazine.com/2016/02/writing-reusable-components-es6/)
+  - [Reusable HTML Components – How to Reuse a Header and Footer on a Website](https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/)
+  - [Webpack: Reusing Module in Multiple Entries](https://medium.com/front-end-weekly/webpack-reusing-module-in-multiple-entries-c9b3dae0ebbc)
