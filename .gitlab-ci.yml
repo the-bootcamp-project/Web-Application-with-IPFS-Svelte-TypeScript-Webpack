@@ -27,7 +27,7 @@ build:
         - main
 
 pages:
-    stage: deploy
+    stage: Deployment
     script:
         - rm -rf public && mkdir -p public/demo
         - cp -r docs/* public/ && cp -r README.md public/_media/
