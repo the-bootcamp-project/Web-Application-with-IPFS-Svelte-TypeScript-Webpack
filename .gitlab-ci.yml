@@ -1,7 +1,44 @@
-docker-build:
-  # Official docker image.
-  image: docker:latest
-  stage: build
+image: "tbcp/webapplication:latest"
+
+before_script:
+    - yarn install
+
+stages:
+    - Static Analysis
+    - Unit Testing
+    - Building
+    - Function Testing
+    - Deployment
+    - Documenting
+    - Environment
+
+linting:
+    stage: Static Analysis
+    script: [yarn run lint]
+    allow_failure: true
+
+build:
+    stage: Building
+    script: [yarn run build]
+    artifacts:
+        paths: [dist]
+    only:
+        - develop
+        - main
+
+pages:
+    stage: deploy
+    script:
+        - rm -rf public && mkdir -p public/demo
+        - cp -r docs/* public/ && cp -r README.md public/_media/
+        - cp -r dist/* public/demo
+    artifacts:
+        paths: [public]
+        expire_in: 1 mins
+
+docker:
+  stage: Environment
+  image: docker:latest # Official docker image.
   services:
     - docker:dind
   before_script:
@@ -10,13 +47,4 @@ docker-build:
     - docker build --pull -t "index.docker.io/tbcp/webapplication:latest" .
     - docker push "index.docker.io/tbcp/webapplication:latest"
   only:
-    - release
-
-pages:
-    stage: deploy
-    script:
-        - rm -rf public && mkdir public
-        - cp -r docs/* public/ && cp -r README.md public/_media/
-    artifacts:
-        paths: [public]
-        expire_in: 1 mins
+      - main
