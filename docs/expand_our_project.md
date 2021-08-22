@@ -34,7 +34,7 @@ delete the `dist/index.html`
 ## Add Markdown Support
 
 ```bash
-yarn add --dev markdown-loader
+yarn add --dev markdown-loader @types/marked
 ```
 
 ```javascript
@@ -49,7 +49,7 @@ module: {
 ## Add Support for configuration with Toml, Yaml and JSON
 
 ```bash
-yarn add --dev toml yamljs json5
+yarn add --dev toml yamljs @types/yamljs json5
 ```
 
 ```javascript

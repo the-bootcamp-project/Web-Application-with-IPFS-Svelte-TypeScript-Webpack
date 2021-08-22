@@ -70,7 +70,7 @@ so...
 ## Prepare the Basic Structure
 
 ```bash
-yarn add --dev webpack webpack-cli webpack-dev-server
+yarn add --dev webpack webpack-cli webpack-dev-server @types/webpack-dev-server
 ```
 
 `package.json`

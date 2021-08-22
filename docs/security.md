@@ -1,7 +1,7 @@
 # Security
 
 ```bash
-yarn add --dev csp-html-webpack-plugin
+yarn add --dev csp-html-webpack-plugin @types/csp-html-webpack-plugin
 ```
 
 ```javascript

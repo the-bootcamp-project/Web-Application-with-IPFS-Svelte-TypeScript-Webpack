@@ -1,7 +1,7 @@
 # Add TypeScript Support
 
 ```bash
-yarn add ts-loader typescript --dev
+yarn add ts-loader typescript ts-node @types/node --dev
 ```
 
 ```javascript

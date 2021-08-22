@@ -1,22 +1,24 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CspHtmlWebpackPlugin = require('csp-html-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+import path from 'path';
+import Webpack from 'webpack';
+import WebpackDev from 'webpack-dev-server';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CspHtmlWebpackPlugin from 'csp-html-webpack-plugin';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 
-const marked = require("marked");
+import marked from 'marked';
 const renderer = new marked.Renderer();
-const toml = require('toml');
-const yaml = require('yamljs');
-const json5 = require('json5');
-const SveltePreprocess = require('svelte-preprocess');
-const Autoprefixer  = require('autoprefixer');
+import toml from 'toml';
+import yaml from 'yamljs';
+import json5 from 'json5';
+import SveltePreprocess from 'svelte-preprocess';
+import Autoprefixer from 'autoprefixer';
 
-const mode = process.env.NODE_ENV ?? 'development';
+const mode = process.env['NODE_ENV'] ?? 'development';
 const isProduction = mode === 'production';
 const isDevelopment = !isProduction;
 
-module.exports = {
-    target: 'browserslist',
+const config: Configuration = {
+	target: isDevelopment ? 'web' : 'browserslist',
 
 	mode:       isProduction    ? 'production' : 'development',
     devtool:    isDevelopment   ? 'eval-cheap-module-source-map' : undefined,
@@ -55,5 +57,18 @@ module.exports = {
         new ForkTsCheckerWebpackPlugin({ eslint: { files: './src/**/*.{ts,js}' } })
     ],
 
-    devServer: { static: './dist' },
+    devServer: {
+        hot: true,
+        stats: 'errors-only',
+        contentBase: 'public',
+        watchContentBase: true
+    },
 };
+
+/**
+ * This interface combines configuration from `webpack` and `webpack-dev-server`. You can add or override properties
+ * in this interface to change the config object type used above.
+ */
+export interface Configuration extends Webpack.Configuration, WebpackDev.Configuration {}
+
+export default config;

@@ -10,16 +10,18 @@
 
 **Minimum Viable Product**: What is what we want?
 
-- [ ] A Modern Web Application
+- [X] A Modern Web Application
   - [X] with Webpack bundeling
   - [X] TypeScript Support
   - [X] and Svelte Frontend Framework
-- [ ] from Startup, a Static Application Security Code Analyzing
-  - [ ] with ESLint (eslint-plugin-security)
+- [X] from Startup, a Static Application Security Code Analyzing
+  - [X] with ESLint (eslint-plugin-security)
 - [ ] A Test Driven Development approche
   - [ ] with Mocha and Chai
-- [ ] a on Board Documentation for our Users
+- [X] a on Board Documentation for our Users
+- [X] a Demopage -> [Project Preview](https://web-application.rtfm.page/demo/)
 - [ ] at the end, the web application shoud hosted in the IPFS-Network
+- [X] last but not least, all steps after development must be done automatically with CI/CD
 
 ---
 
@@ -43,13 +45,29 @@ git clone https://gitlab.com/the-bootcamp-project/boilerplates/web-application.g
 
 ### 💪 Installation 💪
 
+```bash
+cd ./web-application
+
+yarn istall
+```
+
 ## 🚀 Usage 🚀
 
+[Project Preview](https://web-application.rtfm.page/demo/)
+
 ### 🤓 Static Analysis 🤓
+
+```bash
+yarn run lint
+```
 
 ### 🧐 Unit Testing 🧐
 
 ### 🤩 Building 🤩
+
+```bash
+yarn run build
+```
 
 ### 🥳 Deployment 🥳
 
