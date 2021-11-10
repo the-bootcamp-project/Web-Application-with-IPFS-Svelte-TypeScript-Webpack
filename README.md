@@ -1,77 +1,49 @@
 <a href="https://bootcamp-project.com/" target="_blank"><img src="https://bootcamp-project.com/images/logo.png" align="right" height="200" /></a>
 
-<h1 align="center">How to Build and Publish a Web Application with IPFS Svelte TypeScript Webpack</h1>
+<h1 align="center">How to Build and Publish Modern Web Application with Svelte TailwindCSS TypeScript and Webpack</h1>
 
-<div align="center">
-<img src="https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge" />
-</div>
+<div align="center"><img src="https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge" /></div>
 
 ## 👉 About 👈
 
 **Minimum Viable Product**: What is what we want?
 
-- [X] A Modern Web Application
-  - [X] with Webpack bundeling
+- [X] Modern Web techniques
+  - [X] Svelte Components
+    - [X] Storybook UI Testing and Presentation
+  - [X] TailwindCSS Styling
   - [X] TypeScript Support
-  - [X] and Svelte Frontend Framework
-- [X] from Startup, a Static Application Security Code Analyzing
+  - [X] with Webpack bundeling
+- [X] a Static Application Security Code Analyzing
   - [X] with ESLint (eslint-plugin-security)
 - [ ] A Test Driven Development approche
   - [ ] with Mocha and Chai
 - [X] a on Board Documentation for our Users
-- [X] a Demopage -> [Project Preview](https://web-application.rtfm.page/demo/)
-- [ ] at the end, the web application shoud hosted in the IPFS-Network
-- [X] last but not least, all steps after development must be done automatically with CI/CD
+- [X] CI/CD
+  - [ ] Linting
+  - [ ] Building
+  - [ ] Packaging
+  - [ ] Deployment / Publishing
 
 ---
 
 ## 🚀 Getting Started 🚀
 
-If you want to learn from the development path, go to the [Documentation](https://web-application.rtfm.page/).
-
-Atherwise, glhf...
+_For more examples, please refer to the [Documentation](https://web-application.rtfm.page/)_
 
 ### ✋ Prerequisites ✋
 
-So we talk the same language, is it highly recomendet that we have the same Playground (Development Environment)
-
-**Pleas install the [VSCode Editor](https://code.visualstudio.com/)**
-
-and "Clone" our [GitLab Repository](https://gitlab.com/the-bootcamp-project/boilerplates/web-application.git).
-
-```bash
-git clone https://gitlab.com/the-bootcamp-project/boilerplates/web-application.git
-```
-
 ### 💪 Installation 💪
-
-```bash
-cd ./web-application
-
-yarn istall
-```
 
 ## 🚀 Usage 🚀
 
-[Project Preview](https://web-application.rtfm.page/demo/)
-
 ### 🤓 Static Analysis 🤓
-
-```bash
-yarn run lint
-```
 
 ### 🧐 Unit Testing 🧐
 
 ### 🤩 Building 🤩
 
-```bash
-yarn run build
-```
-
 ### 🥳 Deployment 🥳
-
-_For more examples, please refer to the [Documentation](https://web-application.rtfm.page/)_
 
 ## ⭐️ Features ⭐️
 
@@ -82,9 +54,6 @@ _For more examples, please refer to the [Documentation](https://web-application.
 - [Svelte](https://svelte.dev/)
 - [IPFS](https://ipfs.io/)
 - [docsify](https://docsify.js.org/)
-- [Mocha](https://mochajs.org/)
-- [Chai](https://www.chaijs.com/)
-- [Docker](https://www.docker.com/)
 
 ## 📑 Changelog 📑
 
@@ -92,22 +61,17 @@ See [CHANGELOG](CHANGELOG) for more information.
 
 ## 📋 Roadmap 📋
 
-See the [open issues](https://gitlab.com/the-bootcamp-project/boilerplates/web-application/-/issues) for a list of proposed features (and known issues).
+See the [open issues](https://gitlab.com/groups/the-bootcamp-project/frameworks/-/issues) for a list of proposed features (and known issues).
 
 ## 🤝 Contribute 🤝
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Please read the [contribution guidelines](docs/_media/code_of_conduct.md) first.
-2. Fork the Project
-3. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-4. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-5. Push to the Branch (`git push origin feature/AmazingFeature`)
-6. Open a Pull Request
 
 ## 📜 License 📜
 
-Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
+See [LICENSE](LICENSE) for more information.
 
 ## 💌 Contact 💌
 
