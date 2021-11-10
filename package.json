@@ -1,24 +1,27 @@
 {
-	"name": "entropedia-companion",
+	"name": "tbcp-web-application",
 	"version": "0.0.1",
 	"license": "AGPL-3.0",
 	"private": true,
-	"description": "A browser extension for the entrance to your Entropedia-Space",
+	"readme": "https://gitlab.com/the-bootcamp-project/frameworks/web-application/-/blob/main/README.md",
+	"description": "Framework for a modern Web Application, with TypeScript, Svelte, TailwindCSS and Webpack",
 	"keywords": [
-		"How to",
-		"Build",
-		"Publish",
-		"Browser",
-		"Extension",
-		"Web-Ext",
-		"Svelte",
-		"TypeScript",
-		"Webpack",
-		"Boilerplate",
-		"Step-by-Step"
+		"How to", "Build", "Publish", "Modern",
+		"WebApp", "Web Application",
+		"Svelte", "TailwindCSS", "TypeScript", "Webpack",
+		"Boilerplate", "Step-by-Step"
 	],
-	"repository": "https://gitlab.com/entropedia/webext.git",
-	"author": "Entropedia contributors <contributors@entropedia.org>",
+	"homepage": "https://gitlab.com/the-bootcamp-project/frameworks/web-application",
+	"repository": "https://gitlab.com/the-bootcamp-project/frameworks/web-application.git",
+	"bugs": {
+		"url": "https://gitlab.com/the-bootcamp-project/frameworks/web-application/-/issues",
+		"email": "contributors@bootcamp-project.com"
+	},
+	"author": "Bootcamp contributors <contributors@bootcamp-project.com>",
+	"maintainers": [
+		"Bootcamp contributors <contributors@bootcamp-project.com>",
+		"John Ollhorn <john@ollhorn.de> (https://ollhorn.de)"
+	],
 	"contributors": [
 		"John Ollhorn <john@ollhorn.de> (https://ollhorn.de)"
 	],
