@@ -1,5 +1,5 @@
 {
-	"extends": "@bootcamp-project/typescript-config/tsconfig.svelte.json",
+	"extends": "@bootcamp-project/typescript-config/tsconfig.tbcp.json",
 	"include": ["src/**/*","src/node_modules/**/*"],
 	"exclude": ["node_modules/*"],
 	"compilerOptions": {

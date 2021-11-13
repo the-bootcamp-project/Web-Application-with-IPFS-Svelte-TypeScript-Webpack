@@ -84,7 +84,7 @@ const webapp: Configuration = {
 
     entry: {
         /* Desktop App Pages */
-        index: path.resolve(PAGES_DIR,'Index.ts'),
+        index: path.resolve(PAGES_DIR,'Home.ts'),
     },
 
     output: { filename: '[name].js', path: BUNDLE_DIR, clean: true },

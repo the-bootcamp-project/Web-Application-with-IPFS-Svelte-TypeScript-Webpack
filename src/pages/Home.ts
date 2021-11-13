@@ -1,4 +1,4 @@
-import Index from './Index.svelte'
+import Index from './Home.svelte'
 
 const index = new Index({
     target: document.body,
