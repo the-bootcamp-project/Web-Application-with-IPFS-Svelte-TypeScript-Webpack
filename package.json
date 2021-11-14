@@ -48,8 +48,8 @@
 		"bundle": "webpack --node-env production --mode production --config webpack.webapp.ts --progress --no-hot --no-watch",
 		"*******": "--------------------------------------------------------------------------------------------------------------",
 		"measure-bundle": "webpack --node-env production --mode production --config webpack.webapp.ts --progress --no-hot --no-watch --profile --json > stats.json && webpack-bundle-analyzer stats.json",
-		"coverage": "nyc yarn run test",
-		"test": "mocha -r ts-node/register './tests/unit/**/*.test.ts'"
+		"test:unit:coverage": "nyc yarn run test",
+		"test:unit": "mocha -r ts-node/register './tests/unit/**/*.test.ts'"
 	},
 	"devDependencies": {
 		"@types/chai": "^4.2.22",
