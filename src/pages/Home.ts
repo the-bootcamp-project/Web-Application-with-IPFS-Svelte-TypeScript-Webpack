@@ -1,7 +1,7 @@
-import Index from './Home.svelte'
+import Home from './Home.svelte'
 
-const index = new Index({
+const home = new Home({
     target: document.body,
 });
 
-export default index;
+export default home;

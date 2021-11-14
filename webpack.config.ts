@@ -7,9 +7,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import CspHtmlWebpackPlugin from 'csp-html-webpack-plugin'
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 
-import sveltePreprocess from 'svelte-preprocess'
-import tailwind from 'tailwindcss'
-import autoprefixer from 'autoprefixer'
+import svelteConfig from './svelte.config'
 
 const SRC_DIR       = path.resolve(__dirname,'src')
 const BUNDLE_DIR    = path.resolve(__dirname,'build')
@@ -92,21 +90,7 @@ const webapp: Configuration = {
     module: {
         rules: [
             { test: /\.tsx?$/, loader: 'ts-loader', exclude: /node_modules/ },
-            {
-                test: /\.svelte$/,
-                use: {
-                    loader: 'svelte-loader',
-                    options: {
-                        compilerOptions: { dev: !isProduction },
-                        emitCss: isProduction,
-                        hotReload: !isProduction,
-                        preprocess: sveltePreprocess({
-                            sourceMap: !isProduction,
-                            postcss: { plugins: [tailwind,autoprefixer] },
-                        }),
-                    }
-                },
-            },
+            { test: /\.svelte$/, use: { loader: 'svelte-loader', options: svelteConfig } },
             { test: /node_modules\/svelte\/.*\.mjs$/, resolve: { fullySpecified: false } },
             {
                 test: /\.css$/,
