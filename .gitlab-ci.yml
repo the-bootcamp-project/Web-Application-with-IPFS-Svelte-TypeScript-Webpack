@@ -1,21 +1,15 @@
 stages:
-    - Environment
-    - Deployment
+  - Linting
+  - Testing
+  - Deployment
 
-docker-build:
-  # Official docker image.
-  image: docker:latest
-  stage: Environment
-  services:
-    - docker:dind
-  before_script:
-    - echo $CI_DOCKERHUB_PASSWORD | docker login -u "$CI_DOCKERHUB_USER" --password-stdin $CI_DOCKERHUB_REGISTRY
-  script:
-    - docker build --pull -t "index.docker.io/tbcp/webapp:latest" .
-    - docker push "index.docker.io/tbcp/webapp:latest"
-  only:
-    - main
-  allow_failure: true
+lint:
+  stage: Linting
+  script: [yarn run lint:fix]
+
+test:
+  stage: Testing
+  script: [yarn run test:unit]
 
 pages:
   stage: Deployment

@@ -1,7 +1,7 @@
 import Home from './Home.svelte'
 
 const home = new Home({
-    target: document.body,
-});
+  target: document.body
+})
 
-export default home;
+export default home

@@ -107,13 +107,13 @@ const webapp: Configuration = {
         /* Application Pages */
         new HtmlWebpackPlugin({ title: 'index',  filename: 'index.html', template: path.resolve(TEMPLATES_DIR,'default.html'), chunks:['index'] }),
         /* Generate Content Security Policy Meta Tags */
-        new CspHtmlWebpackPlugin(CSP),
+        new CspHtmlWebpackPlugin({ policy: CSP }),
         new MiniCssExtractPlugin({ filename: 'style.css', chunkFilename: 'style.css' }),
         new CopyPlugin({ patterns: [
             /* Copy _locales */
             { from: path.resolve('i18n'), to: path.resolve(BUNDLE_DIR,'i18n'), force: true }
         ] }),
-        new ForkTsCheckerWebpackPlugin({ eslint: { files: './src/**/*.{ts,js}' } }),
+        new ForkTsCheckerWebpackPlugin({ typescript: { enabled: true, configFile: './tsconfig.json' }, eslint: { enabled: true, files: './src/**/*.{ts,js}' } }),
     ],
 
     devServer: {
