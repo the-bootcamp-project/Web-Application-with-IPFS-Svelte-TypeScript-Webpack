@@ -130,16 +130,16 @@ See [Publishing Documentation](https://frameworks.bootcamp-project.com/#/webapp/
 
 <table>
 	<tr>
-		<td>[Svelte](https://svelte.dev/)</td>
-		<td>[Tailwind CSS](https://tailwindcss.com/)</td>
-		<td>[TypeScript](https://www.typescriptlang.org/)</td>
-		<td>[Webpack](https://webpack.js.org/)</td>
+		<td><a href="https://svelte.dev/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/svelte.svg" alt="Svelte" width="200"/></a></td>
+		<td><a href="https://tailwindcss.com/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/tailwindcss.svg" alt="Tailwind CSS" width="200"/></a></td>
+		<td><a href="https://typescriptlang.org/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/typescript.svg" alt="TypeScript" width="200"/></a></td>
+		<td><a href="https://webpack.js.org/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/webpack.svg" alt="Webpack" width="200"/></a></td>
 	</tr>
 	<tr>
-		<td>[Bable](https://babeljs.io/)</td>
-		<td>[ESlint](https://eslint.org/)</td>
-		<td>[Jest](https://jestjs.io/)</td>
-		<td>[Istanbul](https://istanbul.js.org/)</td>
+		<td><a href="https://babeljs.io/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/babel.svg" alt="Svelte" width="200"/></a></td>
+		<td><a href="https://eslint.org/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/eslint.svg" alt="Tailwind CSS" width="200"/></a></td>
+		<td><a href="https://jestjs.io/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/jest.svg" alt="TypeScript" width="200"/></a></td>
+		<td><a href="https://bootcamp-project.com/" target="_blank"><img src="https://bootcamp-project.com/images/logo.png" alt="Bootcamp Config" width="200"/></a></td>
 	</tr>
 </table>
 
