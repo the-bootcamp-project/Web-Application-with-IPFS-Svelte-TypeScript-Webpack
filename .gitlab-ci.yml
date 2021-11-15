@@ -3,17 +3,36 @@ image: "tbcp/nodejs:ubuntu"
 stages:
   - Linting
   - Testing
+  - Building
   - Deployment
+
+before_script:
+  - yarn install
+
+# This folder is cached between builds http://docs.gitlab.com/ce/ci/yaml/README.html#cache
+cache:
+  paths:
+    - node_modules/
 
 lint:
   stage: Linting
   script:
     - yarn run lint:fix
+  allow_failure: true
 
 test:
   stage: Testing
   script:
     - yarn run test:unit
+
+build:
+  stage: Building
+  script:
+    - yarn run build
+  artifacts:
+    paths: [build]
+  only:
+    - main
 
 pages:
   stage: Deployment
