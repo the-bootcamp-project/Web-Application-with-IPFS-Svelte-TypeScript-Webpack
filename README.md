@@ -51,6 +51,8 @@ sudo yarn global add \
 
 **Get the Boilerplate**
 
+> *Boilerplate for new projects only, as a contributor please scroll down to: 🤝 Contribute 🤝*
+
 ```bash
 git clone --depth 1 --branch main \
   https://gitlab.com/the-bootcamp-project/frameworks/web-application.git \
@@ -72,8 +74,6 @@ rm -rf .git && git init .
 ```
 
 **Now it's your's!**
-
-> *Boilerplate for new projects only, as a contributor please scroll down to: 🤝 Contribute 🤝*
 
 ## 💪 Installation 💪
 
