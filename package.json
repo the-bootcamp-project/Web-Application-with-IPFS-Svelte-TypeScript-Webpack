@@ -41,7 +41,7 @@
 		"clean": "rimraf ./node_modules build dist artifacts yarn.lock .nyc_output stats.json",
 		"git:sub:docs": "git submodule add -b main --name documentation https://gitlab.com/the-bootcamp-project/frameworks/docs.git docs",
 		"git:sub:i18n": "git submodule add -b main --name i18n https://gitlab.com/the-bootcamp-project/libraries/i18n.git i18n",
-		"git:sub:merge": "git submodule update --recursive --remote --merge",
+		"git:sub:update": "git submodule update --init --recursive --remote --merge",
 		"dev": "webpack serve --node-env development --mode development",
 		"lint": "eslint './src/**/*.{js,ts,svelte}'",
 		"lint:fix": "eslint --fix './src/**/*.{js,ts,svelte}'",

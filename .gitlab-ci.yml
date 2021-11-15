@@ -8,7 +8,8 @@ stages:
 
 before_script:
   - yarn install
-  - yarn run git:sub:merge
+  - yarn run git:sub:i18n
+  - yarn run git:sub:update
 
 # This folder is cached between builds http://docs.gitlab.com/ce/ci/yaml/README.html#cache
 cache:
