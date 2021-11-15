@@ -49,7 +49,33 @@ sudo yarn global add \
 --prefix /usr/local
 ```
 
-### 💪 Installation 💪
+**Get the Boilerplate**
+
+```bash
+git clone --depth 1 --branch main \
+  https://gitlab.com/the-bootcamp-project/frameworks/web-application.git \
+  hello_webapp
+```
+
+**Change directory and update all Git-Submodules**
+
+```bash
+cd hello_webapp
+
+yarn run git:sub:update
+```
+
+**Remove the old repository and create a new one**
+
+```bash
+rm -rf .git && git init .
+```
+
+**Now it's your's!**
+
+> *Boilerplate for new projects only, as a contributor please scroll down to: 🤝 Contribute 🤝*
+
+## 💪 Installation 💪
 
 Run the following:
 
@@ -70,7 +96,7 @@ Run the following:
 
 See [Development Documentation](https://frameworks.bootcamp-project.com/#/webapp/develop)
 
-### 🤓 Linting 🤓
+## 🤓 Linting 🤓
 
 Run the following:
 
@@ -82,7 +108,7 @@ Run the following:
 
 See [Linting Documentation](https://frameworks.bootcamp-project.com/#/webapp/linting)
 
-### 🧐 Testing 🧐
+## 🧐 Testing 🧐
 
 Run the following:
 
@@ -93,7 +119,7 @@ Run the following:
 
 See [Testing Documentation](https://frameworks.bootcamp-project.com/#/webapp/testing)
 
-### 🤩 Building 🤩
+## 🤩 Building 🤩
 
 Run the following:
 
@@ -104,7 +130,7 @@ Run the following:
 
 See [Building Documentation](https://frameworks.bootcamp-project.com/#/webapp/building)
 
-### 🥳 Publishing 🥳
+## 🥳 Publishing 🥳
 
 Then run the following:
 
@@ -136,9 +162,9 @@ See [Publishing Documentation](https://frameworks.bootcamp-project.com/#/webapp/
 		<td><a href="https://webpack.js.org/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/webpack.svg" alt="Webpack" width="200"/></a></td>
 	</tr>
 	<tr>
-		<td><a href="https://babeljs.io/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/babel.svg" alt="Svelte" width="200"/></a></td>
-		<td><a href="https://eslint.org/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/eslint.svg" alt="Tailwind CSS" width="200"/></a></td>
-		<td><a href="https://jestjs.io/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/jest.svg" alt="TypeScript" width="200"/></a></td>
+		<td><a href="https://babeljs.io/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/babel.svg" alt="babel" width="200"/></a></td>
+		<td><a href="https://eslint.org/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/eslint.svg" alt="eslint" width="200"/></a></td>
+		<td><a href="https://jestjs.io/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/jest.svg" alt="jest" width="200"/></a></td>
 		<td><a href="https://bootcamp-project.com/" target="_blank"><img src="https://bootcamp-project.com/images/logo.png" alt="Bootcamp Config" width="200"/></a></td>
 	</tr>
 </table>
