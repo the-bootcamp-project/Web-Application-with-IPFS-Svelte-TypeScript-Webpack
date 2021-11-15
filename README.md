@@ -41,7 +41,12 @@ and, install other global dependencies
 
 ```bash
 sudo npm install -g yarn
-sudo yarn global add webpack webpack-cli webpack-bundle-analyzer typescript cross-env concurrently rimraf --prefix /usr/local
+
+sudo yarn global add \
+  typescript \
+  webpack webpack-cli webpack-bundle-analyzer \
+  cross-env concurrently rimraf \
+--prefix /usr/local
 ```
 
 ### 💪 Installation 💪
@@ -51,7 +56,7 @@ Run the following:
 - `yarn install` to install dependencies.
 - `yarn run git:sub:merge` to update necessary git submodules
 
-*if you want to use npm, replace `yarn` with `npm`*
+*if you want to use npm, replace `yarn ...` with `npm ...`*
 
 See [Installation Documentation](https://frameworks.bootcamp-project.com/#/webapp/install)
 
@@ -61,7 +66,7 @@ Run the following:
 
 - `yarn run dev` to start the development server
 
-*if you want to use npm, replace `yarn` with `npm`*
+*if you want to use npm, replace `yarn ...` with `npm ...`*
 
 See [Development Documentation](https://frameworks.bootcamp-project.com/#/webapp/develop)
 
@@ -73,7 +78,7 @@ Run the following:
 - `yarn run lint:fix` to start read-write linting, see above and fix warnings/errors.
 - `yarn run lint:format` to prettier the source-code
 
-*if you want to use npm, replace `yarn` with `npm`*
+*if you want to use npm, replace `yarn ...` with `npm ...`*
 
 See [Linting Documentation](https://frameworks.bootcamp-project.com/#/webapp/linting)
 
@@ -84,7 +89,7 @@ Run the following:
 - `yarn run test:unit:coverage` to start unit-testing and show coverage stets
 - `yarn run test:unit` to start unit-testing
 
-*if you want to use npm, replace `yarn` with `npm`*
+*if you want to use npm, replace `yarn ...` with `npm ...`*
 
 See [Testing Documentation](https://frameworks.bootcamp-project.com/#/webapp/testing)
 
@@ -95,7 +100,7 @@ Run the following:
 - `yarn run build:stats` (runs linting and fix first) to start building, create build-profile and shown bundling states
 - `yarn run build` (runs linting and fix first) to start building
 
-*if you want to use npm, replace `yarn` with `npm`*
+*if you want to use npm, replace `yarn ...` with `npm ...`*
 
 See [Building Documentation](https://frameworks.bootcamp-project.com/#/webapp/building)
 
@@ -103,7 +108,7 @@ See [Building Documentation](https://frameworks.bootcamp-project.com/#/webapp/bu
 
 Then run the following:
 
-*if you want to use npm, replace `yarn` with `npm`*
+*if you want to use npm, replace `yarn ...` with `npm ...`*
 
 See [Publishing Documentation](https://frameworks.bootcamp-project.com/#/webapp/publishing)
 
@@ -127,7 +132,6 @@ See [Publishing Documentation](https://frameworks.bootcamp-project.com/#/webapp/
 - [ESlint](https://eslint.org/)
 - [Jest](https://jestjs.io/)
 - [Istanbul](https://istanbul.js.org/)
-- [IPFS](https://ipfs.io/)
 
 ## 📑 Changelog 📑
 
@@ -135,6 +139,7 @@ See [CHANGELOG](CHANGELOG) for more information.
 
 ## 📋 Roadmap 📋
 
+- [IPFS](https://ipfs.io/)
 - **Auto-publishing** with **auto-versioning** and support for manual releases
 
 See the [open issues](https://gitlab.com/the-bootcamp-project/frameworks/web-application/-/issues) for a list of proposed features (and known issues).

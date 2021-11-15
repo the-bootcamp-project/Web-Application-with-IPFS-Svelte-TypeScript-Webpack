@@ -5,7 +5,7 @@ stages:
   - Linting
   - Testing
   - Building
-  - Deployment
+  - Publishing
 
 # This folder is cached between builds http://docs.gitlab.com/ce/ci/yaml/README.html#cache
 cache:
@@ -41,10 +41,20 @@ build:
   only:
     - main
 
-pages:
-  stage: Deployment
+publish:
+  stage: Publishing
+  before_script:
+    - mkdir -p ./public
   script:
-    - mkdir ./public
+    - cp -r build/* public/
+  artifacts:
+    paths: [build,public]
+
+pages:
+  stage: Publishing
+  before_script:
+    - mkdir -p ./public
+  script:
     - cp -r README.md public/
   artifacts:
     paths: [public]
