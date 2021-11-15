@@ -1,7 +1,5 @@
 <a href="https://bootcamp-project.com/" target="_blank"><img src="https://bootcamp-project.com/images/logo.png" align="right" height="200" /></a>
-
 <h1 align="center">How to Build and Publish Modern Web Application with Svelte TailwindCSS TypeScript and Webpack</h1>
-
 <div align="center"><img src="https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge" /></div>
 
 ## 👉 About 👈
@@ -14,14 +12,15 @@
     - [X] Storybook UI Testing and Presentation
   - [X] TailwindCSS Styling
   - [X] with Webpack bundeling
+- [X] Smart reload Development
 - [X] a Static Application Security Code Analyzing
   - [X] with ESLint (eslint-plugin-security)
-- [ ] A Test Driven Development approche
-  - [ ] with Mocha and Chai
+- [X] A Test Driven Development approche
+  - [X] with Jest
 - [X] Automation (CI/CD)
-  - [ ] Linting
-  - [ ] Building
-  - [ ] Packaging
+  - [X] Linting / Prettier
+  - [X] Testing
+  - [X] Building / Packaging
   - [ ] Deployment / Publishing
 - [X] a on Board Documentation for our Users
 
@@ -38,47 +37,84 @@ Ensure you have
 - [Node.js](https://nodejs.org) 12 or later and
 - [Yarn](https://yarnpkg.com) v2 installed
 
+and, install other global dependencies
+
 ```bash
 sudo npm install -g yarn
-# and, install other global dependencies
 sudo yarn global add webpack webpack-cli webpack-bundle-analyzer typescript cross-env concurrently rimraf --prefix /usr/local
 ```
 
 ### 💪 Installation 💪
 
+Run the following:
+
 - `yarn install` to install dependencies.
+
+*if you want to use npm, replace `yarn` with `npm`*
+
+See [Installation Documentation](https://frameworks.bootcamp-project.com/#/webapp/install)
 
 ## 😏 Development 😏
 
 Run the following:
 
-- `yarn run dev:chrome` to start the development server for chrome extension
-- `yarn run dev:firefox` to start the development server for firefox addon
-- `yarn run dev:opera` to start the development server for opera extension
+- `yarn run dev` to start the development server
+
+*if you want to use npm, replace `yarn` with `npm`*
+
+See [Development Documentation](https://frameworks.bootcamp-project.com/#/webapp/develop)
 
 ### 🤓 Linting 🤓
 
+Run the following:
+
+- `yarn run lint` to start read-only linting from js, ts and svelte files.
+- `yarn run lint:fix` to start read-write linting, see above and fix warnings/errors.
+- `yarn run lint:format` to prettier the source-code
+
+*if you want to use npm, replace `yarn` with `npm`*
+
+See [Linting Documentation](https://frameworks.bootcamp-project.com/#/webapp/linting)
+
 ### 🧐 Testing 🧐
+
+Run the following:
+
+- `yarn run test:unit:coverage` to start unit-testing and show coverage stets
+- `yarn run test:unit` to start unit-testing
+
+*if you want to use npm, replace `yarn` with `npm`*
+
+See [Testing Documentation](https://frameworks.bootcamp-project.com/#/webapp/testing)
 
 ### 🤩 Building 🤩
 
-Then run the following:
+Run the following:
 
-- `yarn run build:chrome` to build chrome extension
-- `yarn run build:firefox` to build firefox addon
-- `yarn run build:opera` to build opera extension
-- `yarn run build` builds and packs extensions all at once to extension/ directory
+- `yarn run build:stats` (runs linting and fix first) to start building, create build-profile and shown bundling states
+- `yarn run build` (runs linting and fix first) to start building
+
+*if you want to use npm, replace `yarn` with `npm`*
+
+See [Building Documentation](https://frameworks.bootcamp-project.com/#/webapp/building)
 
 ### 🥳 Publishing 🥳
 
+Then run the following:
+
+*if you want to use npm, replace `yarn` with `npm`*
+
+See [Publishing Documentation](https://frameworks.bootcamp-project.com/#/webapp/publishing)
+
 ## ⭐️ Features ⭐️
 
-- **ES6 / Node.js** modules support
-- **TypeScript** by default
-- [**Svelte** UI Library](https://gitlab.com/the-bootcamp-project/libraries/svelte-components) by default
-- **Tailwind CSS** by default
-- **Auto-publishing** with **auto-versioning** and support for manual releases
-- [Extensive configuration **documentation**](https://frameworks.bootcamp-project.com/#/browser_extension/index)
+- **ES6 / Node.js** and **TypeScript** modules support by default
+- [**Svelte** UI Library and **Tailwind CSS**](https://gitlab.com/the-bootcamp-project/libraries/svelte-components) by default
+- **Linting and Prettier** with **ESlint and Prettier** by default
+- **Unit-Tests** with **Jest**, Coverage with **Istanbul NYC** by default
+- [**Security-first production ready configuration**](https://gitlab.com/the-bootcamp-project/libraries/node-configs/-/blob/main/README.md) by default
+- **Automatic CI/CD Pipeline** for **GitLab** by default
+- [Extensive configuration **documentation**](https://frameworks.bootcamp-project.com/#/webapp/index)
 
 ### 😎 Built With 😎
 
@@ -86,6 +122,10 @@ Then run the following:
 - [TypeScript](https://www.typescriptlang.org/)
 - [Svelte](https://svelte.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Bable](https://babeljs.io/)
+- [ESlint](https://eslint.org/)
+- [Jest](https://jestjs.io/)
+- [Istanbul](https://istanbul.js.org/)
 - [IPFS](https://ipfs.io/)
 
 ## 📑 Changelog 📑
@@ -94,10 +134,7 @@ See [CHANGELOG](CHANGELOG) for more information.
 
 ## 📋 Roadmap 📋
 
-- Smart reload
-- Auto packs browser specific build files
-- Auto-syncing options
-- Automatic build on code changes
+- **Auto-publishing** with **auto-versioning** and support for manual releases
 
 See the [open issues](https://gitlab.com/the-bootcamp-project/frameworks/web-application/-/issues) for a list of proposed features (and known issues).
 
@@ -105,7 +142,7 @@ See the [open issues](https://gitlab.com/the-bootcamp-project/frameworks/web-app
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-1. Please read the [contribution guidelines](docs/_media/code_of_conduct.md) first.
+Please read the [contribution guidelines](docs/_media/code_of_conduct.md) first.
 
 ## 📜 License 📜
 
