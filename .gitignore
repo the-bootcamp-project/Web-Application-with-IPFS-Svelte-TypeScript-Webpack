@@ -7,6 +7,7 @@ storybook-static
 # binaries and builds
 bin
 bundle
+build
 public/build/
 dist
 artifacts

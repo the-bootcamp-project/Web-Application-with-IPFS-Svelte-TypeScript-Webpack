@@ -7,14 +7,14 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import CspHtmlWebpackPlugin from 'csp-html-webpack-plugin'
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 
-import svelteConfig from './svelte.config'
+const SvelteConfig = require('@bootcamp-project/svelte-config/svelte.config')
 
-const SRC_DIR       = path.resolve(__dirname,'src')
-const BUNDLE_DIR    = path.resolve(__dirname,'build')
-const DEP_DIR       = path.resolve(__dirname,'node_modules')
-const TAILWIND_DIR  = path.resolve(DEP_DIR,'@bootcamp-project','tailwind-config')
-const PAGES_DIR     = path.resolve(SRC_DIR,'pages')
-const TEMPLATES_DIR = path.resolve(SRC_DIR,'templates')
+const SRC_DIR = path.resolve(__dirname, 'src')
+const BUNDLE_DIR = path.resolve(__dirname, 'build')
+const DEP_DIR = path.resolve(__dirname, 'node_modules')
+const TAILWIND_DIR = path.resolve(DEP_DIR, '@bootcamp-project', 'tailwind-config')
+const PAGES_DIR = path.resolve(SRC_DIR, 'pages')
+const TEMPLATES_DIR = path.resolve(SRC_DIR, 'templates')
 
 const mode = process.env['NODE_ENV'] ?? 'development'
 const isProduction = mode === 'production'
@@ -33,11 +33,11 @@ const PROD_CSP = {
 const CSP = isProduction ? PROD_CSP : DEV_CSP
 
 const webapp: Configuration = {
-    context:    path.resolve(__dirname),
+    context: path.resolve(__dirname),
 
-	mode:       isProduction ? 'production' : 'development',
-	devtool:    isProduction ? 'source-map' : 'eval-source-map',
-	target:     'browserslist',
+    mode: isProduction ? 'production' : 'development',
+    devtool: isProduction ? 'source-map' : 'eval-source-map',
+    target: 'browserslist',
 
     performance: {
         hints: isProduction ? false : undefined,
@@ -47,9 +47,9 @@ const webapp: Configuration = {
 
     resolve: {
         modules: [path.join(__dirname, 'node_modules')],
-        alias: { svelte: path.resolve(DEP_DIR,'svelte') },
-        extensions: ['.mjs','.ts','.js','.json','.svelte'],
-        mainFields: ['svelte','browser','module','main'],
+        alias: { svelte: path.resolve(DEP_DIR, 'svelte') },
+        extensions: ['.mjs', '.ts', '.js', '.json', '.svelte'],
+        mainFields: ['svelte', 'browser', 'module', 'main'],
         fallback: {
             util: false,
             path: false,
@@ -82,7 +82,7 @@ const webapp: Configuration = {
 
     entry: {
         /* Desktop App Pages */
-        index: path.resolve(PAGES_DIR,'Home.ts'),
+        index: path.resolve(PAGES_DIR, 'Home.ts'),
     },
 
     output: { filename: '[name].js', path: BUNDLE_DIR, clean: true },
@@ -90,14 +90,14 @@ const webapp: Configuration = {
     module: {
         rules: [
             { test: /\.tsx?$/, loader: 'ts-loader', exclude: /node_modules/ },
-            { test: /\.svelte$/, use: { loader: 'svelte-loader', options: svelteConfig } },
+            { test: /\.svelte$/, use: { loader: 'svelte-loader', options: SvelteConfig } },
             { test: /node_modules\/svelte\/.*\.mjs$/, resolve: { fullySpecified: false } },
             {
                 test: /\.css$/,
-                use:[
+                use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader",
-                    { loader: "postcss-loader", options: { postcssOptions: { config: path.resolve(TAILWIND_DIR,'postcss.config.js') } } }
+                    { loader: "postcss-loader", options: { postcssOptions: { config: path.resolve(TAILWIND_DIR, 'postcss.config.js') } } }
                 ]
             }
         ]
@@ -105,14 +105,16 @@ const webapp: Configuration = {
 
     plugins: [
         /* Application Pages */
-        new HtmlWebpackPlugin({ title: 'index',  filename: 'index.html', template: path.resolve(TEMPLATES_DIR,'default.html'), chunks:['index'] }),
+        new HtmlWebpackPlugin({ title: 'index', filename: 'index.html', template: path.resolve(TEMPLATES_DIR, 'default.html'), chunks: ['index'] }),
         /* Generate Content Security Policy Meta Tags */
-        new CspHtmlWebpackPlugin({ policy: CSP }),
+        new CspHtmlWebpackPlugin(CSP),
         new MiniCssExtractPlugin({ filename: 'style.css', chunkFilename: 'style.css' }),
-        new CopyPlugin({ patterns: [
-            /* Copy _locales */
-            { from: path.resolve('i18n'), to: path.resolve(BUNDLE_DIR,'i18n'), force: true }
-        ] }),
+        new CopyPlugin({
+            patterns: [
+                /* Copy _locales */
+                { from: path.resolve('i18n'), to: path.resolve(BUNDLE_DIR, 'i18n'), force: true }
+            ]
+        }),
         new ForkTsCheckerWebpackPlugin({ typescript: { enabled: true, configFile: './tsconfig.json' }, eslint: { enabled: true, files: './src/**/*.{ts,js}' } }),
     ],
 
@@ -126,5 +128,5 @@ const webapp: Configuration = {
 };
 
 // This interface combines configuration from `webpack` and `webpack-dev-server`. You can add or override properties in this interface to change the config object type used above.
-export interface Configuration extends Webpack.Configuration, WebpackDev.Configuration {}
+export interface Configuration extends Webpack.Configuration, WebpackDev.Configuration { }
 export default webapp;
