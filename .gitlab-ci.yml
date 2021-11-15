@@ -46,7 +46,7 @@ pages:
   before_script:
     - mkdir -p ./public
   script:
-    - cp -r build/* public/
+    - yarn run publish
     - cp -r README.md public/
   artifacts:
     paths: [build,public]

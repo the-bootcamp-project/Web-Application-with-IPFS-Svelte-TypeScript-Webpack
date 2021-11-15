@@ -110,7 +110,11 @@ Then run the following:
 
 *if you want to use npm, replace `yarn ...` with `npm ...`*
 
+- `yarn run publish` (creates `./public`) copy content from `./build` to `./public` - *GitLab Pages Example*
+
 See [Publishing Documentation](https://frameworks.bootcamp-project.com/#/webapp/publishing)
+
+> Visit "[Hello world!](https://the-bootcamp-project.gitlab.io/frameworks/web-application/)" Example: `https://the-bootcamp-project.gitlab.io/frameworks/web-application/`
 
 ## ⭐️ Features ⭐️
 
@@ -119,19 +123,15 @@ See [Publishing Documentation](https://frameworks.bootcamp-project.com/#/webapp/
 - **Linting and Prettier** with **ESlint and Prettier** by default
 - **Unit-Tests** with **Jest**, Coverage with **Istanbul NYC** by default
 - [**Security-first production ready configuration**](https://gitlab.com/the-bootcamp-project/libraries/node-configs/-/blob/main/README.md) by default
-- **Automatic CI/CD Pipeline** for **GitLab** by default
+- **Automatic CI/CD Pipeline** for **GitLab Pages** by default
 - [Extensive configuration **documentation**](https://frameworks.bootcamp-project.com/#/webapp/index)
 
 ### 😎 Built With 😎
 
-- [Webpack](https://webpack.js.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Svelte](https://svelte.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Bable](https://babeljs.io/)
-- [ESlint](https://eslint.org/)
-- [Jest](https://jestjs.io/)
-- [Istanbul](https://istanbul.js.org/)
+|                               |                                          |                                               |                                      |
+| ----------------------------- | ---------------------------------------- | --------------------------------------------- | ------------------------------------ |
+| [Svelte](https://svelte.dev/) | [Tailwind CSS](https://tailwindcss.com/) | [TypeScript](https://www.typescriptlang.org/) | [Webpack](https://webpack.js.org/)   |
+| [Bable](https://babeljs.io/)  | [ESlint](https://eslint.org/)            | [Jest](https://jestjs.io/)                    | [Istanbul](https://istanbul.js.org/) |
 
 ## 📑 Changelog 📑
 

@@ -50,7 +50,8 @@
 		"build:stats": "yarn run lint:format && webpack --node-env production --mode production --profile --json > stats.json && webpack-bundle-analyzer stats.json",
 		"build": "yarn run lint:format && webpack --node-env production --mode production",
 		"test:unit:coverage": "nyc yarn run test:unit",
-		"test:unit": "jest"
+		"test:unit": "jest",
+		"publish": "mkdir -p ./public && cp -r build/* public/"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.16.0",
