@@ -5,11 +5,13 @@ stages:
 
 lint:
   stage: Linting
-  script: [yarn run lint:fix]
+  script:
+    - yarn run lint:fix
 
 test:
   stage: Testing
-  script: [yarn run test:unit]
+  script:
+    - yarn run test:unit
 
 pages:
   stage: Deployment
