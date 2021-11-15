@@ -41,21 +41,13 @@ build:
   only:
     - main
 
-publish:
-  stage: Publishing
-  before_script:
-    - mkdir -p ./public
-  script:
-    - cp -r build/* public/
-  artifacts:
-    paths: [build,public]
-
 pages:
   stage: Publishing
   before_script:
     - mkdir -p ./public
   script:
+    - cp -r build/* public/
     - cp -r README.md public/
   artifacts:
-    paths: [public]
+    paths: [build,public]
     expire_in: 1 mins
