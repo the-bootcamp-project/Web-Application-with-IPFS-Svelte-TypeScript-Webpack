@@ -128,10 +128,20 @@ See [Publishing Documentation](https://frameworks.bootcamp-project.com/#/webapp/
 
 ### 😎 Built With 😎
 
-|                               |                                          |                                               |                                      |
-| ----------------------------- | ---------------------------------------- | --------------------------------------------- | ------------------------------------ |
-| [Svelte](https://svelte.dev/) | [Tailwind CSS](https://tailwindcss.com/) | [TypeScript](https://www.typescriptlang.org/) | [Webpack](https://webpack.js.org/)   |
-| [Bable](https://babeljs.io/)  | [ESlint](https://eslint.org/)            | [Jest](https://jestjs.io/)                    | [Istanbul](https://istanbul.js.org/) |
+<table>
+	<tr>
+		<td>[Svelte](https://svelte.dev/)</td>
+		<td>[Tailwind CSS](https://tailwindcss.com/)</td>
+		<td>[TypeScript](https://www.typescriptlang.org/)</td>
+		<td>[Webpack](https://webpack.js.org/)</td>
+	</tr>
+	<tr>
+		<td>[Bable](https://babeljs.io/)</td>
+		<td>[ESlint](https://eslint.org/)</td>
+		<td>[Jest](https://jestjs.io/)</td>
+		<td>[Istanbul](https://istanbul.js.org/)</td>
+	</tr>
+</table>
 
 ## 📑 Changelog 📑
 
