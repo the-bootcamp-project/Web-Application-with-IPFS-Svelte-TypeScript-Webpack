@@ -49,6 +49,7 @@ sudo yarn global add webpack webpack-cli webpack-bundle-analyzer typescript cros
 Run the following:
 
 - `yarn install` to install dependencies.
+- `yarn run git:sub:merge` to update necessary git submodules
 
 *if you want to use npm, replace `yarn` with `npm`*
 

@@ -8,19 +8,20 @@ stages:
 
 before_script:
   - yarn install
+  - yarn run git:sub:merge
 
 # This folder is cached between builds http://docs.gitlab.com/ce/ci/yaml/README.html#cache
 cache:
   paths:
     - node_modules/
 
-lint:
+lint:fix:
   stage: Linting
   script:
     - yarn run lint:fix
   allow_failure: true
 
-test:
+test:unit:
   stage: Testing
   script:
     - yarn run test:unit
