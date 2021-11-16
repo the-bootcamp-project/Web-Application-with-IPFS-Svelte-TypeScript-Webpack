@@ -175,8 +175,8 @@ See [CHANGELOG](CHANGELOG) for more information.
 
 ## 📋 Roadmap 📋
 
-- [IPFS](https://ipfs.io/)
-- **Auto-publishing** with **auto-versioning** and support for manual releases
+- Host this WebApp in [IPFS](https://ipfs.io/) Network
+- **auto-versioning**
 
 See the [open issues](https://gitlab.com/the-bootcamp-project/frameworks/web-application/-/issues) for a list of proposed features (and known issues).
 
