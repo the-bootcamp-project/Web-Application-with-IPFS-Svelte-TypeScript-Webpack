@@ -1,6 +1,6 @@
 <script lang="ts">
   // import { Button } from '@bootcamp-project/svelte-components'
-  export let name: string = 'world'
+  export let name: string
 </script>
 
 <main>

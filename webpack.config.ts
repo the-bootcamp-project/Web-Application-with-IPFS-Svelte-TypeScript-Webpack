@@ -6,30 +6,23 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import CspHtmlWebpackPlugin from 'csp-html-webpack-plugin'
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
-
-const SvelteConfig = require('@bootcamp-project/svelte-config/svelte.config')
+import NodePolyfillPlugin from 'node-polyfill-webpack-plugin'
+import { InjectManifest } from 'workbox-webpack-plugin'
 
 const SRC_DIR = path.resolve(__dirname, 'src')
-const BUNDLE_DIR = path.resolve(__dirname, 'build')
+const DEST_DIR = path.resolve(__dirname, 'build')
 const DEP_DIR = path.resolve(__dirname, 'node_modules')
-const TAILWIND_DIR = path.resolve(DEP_DIR, '@bootcamp-project', 'tailwind-config')
-const PAGES_DIR = path.resolve(SRC_DIR, 'pages')
+const WORKER_DIR = path.resolve(SRC_DIR, 'worker')
 const TEMPLATES_DIR = path.resolve(SRC_DIR, 'templates')
+
+const SvelteConfig = require('@bootcamp-project/svelte-config/svelte.config')
+const PostCSSConfigPath = path.resolve(DEP_DIR, '@bootcamp-project','tailwind-config','postcss.config.js')
 
 const mode = process.env['NODE_ENV'] ?? 'development'
 const isProduction = mode === 'production'
 
-const DEV_CSP = {
-    'script-src': [
-        "'self'",
-        "'unsafe-eval'"
-    ],
-    'style-src': ["'self'"]
-}
-const PROD_CSP = {
-    'script-src': ["'self'"],
-    'style-src': ["'self'"]
-}
+const DEV_CSP = { 'script-src': ["'self'", "'unsafe-eval'"], 'style-src': ["'self'"] }
+const PROD_CSP = { 'script-src': ["'self'"], 'style-src': ["'self'"] }
 const CSP = isProduction ? PROD_CSP : DEV_CSP
 
 const webapp: Configuration = {
@@ -38,6 +31,13 @@ const webapp: Configuration = {
     mode: isProduction ? 'production' : 'development',
     devtool: isProduction ? 'source-map' : 'eval-source-map',
     target: 'browserslist',
+
+    entry: {
+        /* App Pages */
+        index: path.resolve(SRC_DIR, 'App.ts')
+    },
+
+    output: { filename: '[name].js', path: DEST_DIR, clean: true },
 
     performance: {
         hints: isProduction ? false : undefined,
@@ -80,42 +80,38 @@ const webapp: Configuration = {
         },
     },
 
-    entry: {
-        /* Desktop App Pages */
-        index: path.resolve(PAGES_DIR, 'Home.ts'),
-    },
-
-    output: { filename: '[name].js', path: BUNDLE_DIR, clean: true },
-
     module: {
         rules: [
-            { test: /\.tsx?$/, loader: 'ts-loader', exclude: /node_modules/ },
+            { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
+            { test: /\.tsx?$/, loader: 'ts-loader', options: { transpileOnly: true }, exclude: /node_modules/ },
             { test: /\.svelte$/, use: { loader: 'svelte-loader', options: SvelteConfig } },
             { test: /node_modules\/svelte\/.*\.mjs$/, resolve: { fullySpecified: false } },
             {
                 test: /\.css$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    { loader: "postcss-loader", options: { postcssOptions: { config: path.resolve(TAILWIND_DIR, 'postcss.config.js') } } }
+                use: [MiniCssExtractPlugin.loader, "css-loader",
+                { loader: "postcss-loader", options: { postcssOptions: { config: PostCSSConfigPath } } }
                 ]
             }
         ]
     },
 
     plugins: [
+        new NodePolyfillPlugin(),
+        // ServiceWorker
+        new InjectManifest({ swSrc: path.resolve(WORKER_DIR, 'serviceworker.ts') }),
         /* Application Pages */
         new HtmlWebpackPlugin({ title: 'index', filename: 'index.html', template: path.resolve(TEMPLATES_DIR, 'default.html'), chunks: ['index'] }),
         /* Generate Content Security Policy Meta Tags */
         new CspHtmlWebpackPlugin(CSP),
+        /* Gets all our css and put in a unique file */
         new MiniCssExtractPlugin({ filename: 'style.css', chunkFilename: 'style.css' }),
         new CopyPlugin({
             patterns: [
                 /* Copy _locales */
-                { from: path.resolve('i18n'), to: path.resolve(BUNDLE_DIR, 'i18n'), force: true }
+                { from: path.resolve('i18n'), to: path.resolve(DEST_DIR, 'i18n'), force: true }
             ]
         }),
-        new ForkTsCheckerWebpackPlugin({ typescript: { enabled: true, configFile: './tsconfig.json' }, eslint: { enabled: true, files: './src/**/*.{ts,js}' } }),
+        new ForkTsCheckerWebpackPlugin({ typescript: { enabled: true, configFile: path.resolve(__dirname, 'tsconfig.json') } }),
     ],
 
     devServer: {

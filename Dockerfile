@@ -12,6 +12,7 @@ RUN sudo yarn global add \
     cross-env \
     concurrently \
     rimraf \
+    http-server \
     --prefix /usr/local
 
 RUN sudo yarn global add \
