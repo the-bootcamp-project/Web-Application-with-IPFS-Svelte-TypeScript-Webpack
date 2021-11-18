@@ -160,13 +160,13 @@ See [Publishing Documentation](https://frameworks.bootcamp-project.com/#/webapp/
 		<td><a href="https://tailwindcss.com/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/tailwindcss.svg" alt="Tailwind CSS" width="200"/></a></td>
 		<td><a href="https://developers.google.com/web/tools/workbox" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/workbox.svg" alt="Workbox" width="200"/></a></td>
 		<td><a href="https://typescriptlang.org/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/typescript.svg" alt="TypeScript" width="200"/></a></td>
-		<td><a href="https://webpack.js.org/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/webpack.svg" alt="Webpack" width="200"/></a></td>
 	</tr>
 	<tr>
+		<td><a href="https://webpack.js.org/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/webpack.svg" alt="Webpack" width="200"/></a></td>
 		<td><a href="https://babeljs.io/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/babel.svg" alt="babel" width="200"/></a></td>
 		<td><a href="https://eslint.org/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/eslint.svg" alt="eslint" width="200"/></a></td>
 		<td><a href="https://jestjs.io/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/jest.svg" alt="jest" width="200"/></a></td>
-		<td><a href="https://bootcamp-project.com/" target="_blank"><img src="https://bootcamp-project.com/images/logo.png" alt="Bootcamp Config" width="200"/></a></td>
+		<!-- <td><a href="https://bootcamp-project.com/" target="_blank"><img src="https://bootcamp-project.com/images/logo.png" alt="Bootcamp Config" width="200"/></a></td> -->
 	</tr>
 </table>
 
