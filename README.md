@@ -158,6 +158,7 @@ See [Publishing Documentation](https://frameworks.bootcamp-project.com/#/webapp/
 	<tr>
 		<td><a href="https://svelte.dev/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/svelte.svg" alt="Svelte" width="200"/></a></td>
 		<td><a href="https://tailwindcss.com/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/tailwindcss.svg" alt="Tailwind CSS" width="200"/></a></td>
+		<td><a href="https://developers.google.com/web/tools/workbox" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/workbox.svg" alt="Workbox" width="200"/></a></td>
 		<td><a href="https://typescriptlang.org/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/typescript.svg" alt="TypeScript" width="200"/></a></td>
 		<td><a href="https://webpack.js.org/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/webpack.svg" alt="Webpack" width="200"/></a></td>
 	</tr>
