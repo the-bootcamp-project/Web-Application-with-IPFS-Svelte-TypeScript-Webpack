@@ -3,9 +3,7 @@ import './assets/global.css'
 
 const app = new Home({
   target: document.body,
-  props: {
-    name: 'world'
-  }
+  props: { hello: 'world' }
 })
 
 export default app

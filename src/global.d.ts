@@ -1,9 +1,7 @@
 /// <reference types="svelte" />
 
+// svelte.d.ts
 declare module '*.svelte' {
-  const value: any
+  const value: any // Add better type definitions here if desired.
   export default value
 }
-
-declare module '@bootcamp-project/svelte-config/svelte.config'
-declare module '@bootcamp-project/eslint-config'
