@@ -5,7 +5,7 @@ import { render } from "@testing-library/svelte";
 import Home from "../../src/pages/Home.svelte";
 
 test("should render", () => {
-    const results = render(Home, { props: { name: "world" } });
+    const results = render(Home, { props: { hello: "world" } });
 
     expect(() => results.getByText("Hello world!")).not.toThrow();
 });
