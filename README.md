@@ -80,7 +80,7 @@ rm -rf .git && git init .
 Run the following:
 
 - `yarn install` to install dependencies.
-- `yarn run git:sub:merge` to update necessary git submodules
+- `yarn run git:sub:merge` *(starts automatic after `yarn install`)* to update necessary git submodules
 
 *if you want to use npm, replace `yarn ...` with `npm ...`*
 
@@ -100,9 +100,10 @@ See [Development Documentation](https://frameworks.bootcamp-project.com/#/webapp
 
 Run the following:
 
+- `yarn run format` to prettier the source-code
 - `yarn run lint` to start read-only linting from js, ts and svelte files.
+- `yarn run lint:svelte` to start linting for Svelte Components
 - `yarn run lint:fix` to start read-write linting, see above and fix warnings/errors.
-- `yarn run lint:format` to prettier the source-code
 
 *if you want to use npm, replace `yarn ...` with `npm ...`*
 
@@ -112,7 +113,8 @@ See [Linting Documentation](https://frameworks.bootcamp-project.com/#/webapp/lin
 
 Run the following:
 
-- `yarn run test:unit:coverage` to start unit-testing and show coverage stets
+- `yarn run test:smoke` to start a local HTTP-Server to preview the build
+- `yarn run test:coverage` to start unit-testing and show coverage stets
 - `yarn run test:unit` to start unit-testing
 
 *if you want to use npm, replace `yarn ...` with `npm ...`*
@@ -123,8 +125,8 @@ See [Testing Documentation](https://frameworks.bootcamp-project.com/#/webapp/tes
 
 Run the following:
 
-- `yarn run build:stats` (runs linting and fix first) to start building, create build-profile and shown bundling states
-- `yarn run build` (runs linting and fix first) to start building
+- `yarn run build:stats` *(runs linting and fix first)* to start building, create build-profile and shown bundling states
+- `yarn run build` *(runs linting and fix first)* to start building
 
 *if you want to use npm, replace `yarn ...` with `npm ...`*
 
@@ -134,9 +136,9 @@ See [Building Documentation](https://frameworks.bootcamp-project.com/#/webapp/bu
 
 Then run the following:
 
-*if you want to use npm, replace `yarn ...` with `npm ...`*
+- `yarn run publish` *(creates `./public`)* copy content from `./build` to `./public` - *GitLab Pages Example*
 
-- `yarn run publish` (creates `./public`) copy content from `./build` to `./public` - *GitLab Pages Example*
+*if you want to use npm, replace `yarn ...` with `npm ...`*
 
 See [Publishing Documentation](https://frameworks.bootcamp-project.com/#/webapp/publishing)
 
@@ -146,7 +148,7 @@ See [Publishing Documentation](https://frameworks.bootcamp-project.com/#/webapp/
 
 - **ES6 / Node.js** and **TypeScript** modules support by default
 - [**Svelte** UI Library and **Tailwind CSS**](https://gitlab.com/the-bootcamp-project/libraries/svelte-components) by default
-- **Linting and Prettier** with **ESlint and Prettier** by default
+- **Linting and Prettier** with **ESlint, Svelte-Check and Prettier** by default
 - **Unit-Tests** with **Jest**, Coverage with **Istanbul NYC** by default
 - [**Security-first production ready configuration**](https://gitlab.com/the-bootcamp-project/libraries/node-configs/-/blob/main/README.md) by default
 - **Automatic CI/CD Pipeline** for **GitLab Pages** by default
@@ -160,13 +162,13 @@ See [Publishing Documentation](https://frameworks.bootcamp-project.com/#/webapp/
 		<td><a href="https://tailwindcss.com/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/tailwindcss.svg" alt="Tailwind CSS" width="200"/></a></td>
 		<td><a href="https://developers.google.com/web/tools/workbox" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/workbox.svg" alt="Workbox" width="200"/></a></td>
 		<td><a href="https://typescriptlang.org/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/typescript.svg" alt="TypeScript" width="200"/></a></td>
+		<td><a href="https://jestjs.io/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/jest.svg" alt="jest" width="200"/></a></td>
 	</tr>
 	<tr>
 		<td><a href="https://webpack.js.org/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/webpack.svg" alt="Webpack" width="200"/></a></td>
 		<td><a href="https://babeljs.io/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/babel.svg" alt="babel" width="200"/></a></td>
 		<td><a href="https://eslint.org/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/eslint.svg" alt="eslint" width="200"/></a></td>
-		<td><a href="https://jestjs.io/" target="_blank"><img src="https://cdr.rtfm.page/logos/programming/jest.svg" alt="jest" width="200"/></a></td>
-		<!-- <td><a href="https://bootcamp-project.com/" target="_blank"><img src="https://bootcamp-project.com/images/logo.png" alt="Bootcamp Config" width="200"/></a></td> -->
+		<td><a href="https://bootcamp-project.com/" target="_blank"><img src="https://bootcamp-project.com/images/logo.png" alt="Bootcamp Config" width="200"/></a></td>
 	</tr>
 </table>
 
@@ -176,8 +178,8 @@ See [CHANGELOG](CHANGELOG) for more information.
 
 ## 📋 Roadmap 📋
 
-- Host this WebApp in [IPFS](https://ipfs.io/) Network
 - **auto-versioning**
+- Host this WebApp in [IPFS](https://ipfs.io/) Network
 
 See the [open issues](https://gitlab.com/the-bootcamp-project/frameworks/web-application/-/issues) for a list of proposed features (and known issues).
 
