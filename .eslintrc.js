@@ -1,6 +1,6 @@
 'use strict';
 
-const ESlintConfig = require('@bootcamp-project/eslint-config/eslint.config')
+const ESlintConfig = require('@bootcamp-project/eslint-config/eslint.svelte-ts.config')
 module.exports = {
     ...ESlintConfig,
     rules: {
