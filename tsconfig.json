@@ -1,5 +1,5 @@
 {
-	"extends": "@bootcamp-project/typescript-config/tsconfig.tbcp.json",
+	"extends": "@bootcamp-project/typescript-config/src/tsconfig.json",
 	"include": ["src/**/*"],
 	"exclude": ["node_modules/*"],
 	"compilerOptions": {

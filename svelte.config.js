@@ -1,4 +1,4 @@
 'use strict';
 
-const SvelteConfig = require('@bootcamp-project/svelte-config/svelte.config')
+const SvelteConfig = require('@bootcamp-project/svelte-config').SvelteConfigProd
 module.exports = SvelteConfig

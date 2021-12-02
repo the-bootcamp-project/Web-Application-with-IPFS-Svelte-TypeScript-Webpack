@@ -1,6 +1,6 @@
 'use strict';
 
-const JestConfig = require('@bootcamp-project/jest-config/jest.svelte.config')
+const JestConfig = require('@bootcamp-project/svelte-config').JestSvelte
 module.exports = {
     ...JestConfig,
     coverageReporters: ['html','text'],
