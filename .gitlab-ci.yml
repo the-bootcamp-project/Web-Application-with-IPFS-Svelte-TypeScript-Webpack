@@ -32,8 +32,6 @@ test:unit:
 
 build:
   stage: Building
-  before_script:
-    - yarn run git:sub:update
   script:
     - yarn run build
   artifacts:

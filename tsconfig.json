@@ -1,9 +1,11 @@
 {
-	"extends": "@bootcamp-project/typescript-config/src/tsconfig.json",
+	"extends": "@bootcamp-project/typescript-config/dist/tsconfig.svelte.json",
 	"include": ["src/**/*"],
 	"exclude": ["node_modules/*"],
 	"compilerOptions": {
-		"declaration": false, /* Generates corresponding '.d.ts' file. */
-		"declarationMap": false, /* Generates a sourcemap for each corresponding '.d.ts' file. */
+		"noImplicitAny": false,
+		"typeRoots": ["node_modules/@types"],	/* List of folders to include type definitions from. */
+		"declaration": false,					/* Generates corresponding '.d.ts' file. */
+		"declarationMap": false,				/* Generates a sourcemap for each corresponding '.d.ts' file. */
 	}
 }

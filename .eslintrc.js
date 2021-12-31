@@ -1,6 +1,6 @@
 'use strict';
 
-const ESlintConfig = require('@bootcamp-project/typescript-config').ESLintTypeScript
+const ESlintConfig = require('@bootcamp-project/svelte-config').ESLintSvelteTypeScriptConfig
 module.exports = {
     ...ESlintConfig,
     rules: {
@@ -11,5 +11,6 @@ module.exports = {
         '@typescript-eslint/no-unsafe-call': 'off',
         '@typescript-eslint/no-unsafe-argument': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
+		'pii/no-dob': 'off',
     }
 }
